@@ -10,7 +10,7 @@ public:
             digit=x%10;
             x/=10;
             if(y<min/10 || y>max/10)
-            {return 0; break;}
+            {return 0;}
             y=(y*10)+digit;
         }
         return y;
