@@ -10,7 +10,7 @@ public:
         int temp=freq[s[0]];
         for (char ch:s)
         {
-            if (freq[ch]!=temp && freq[ch]!=0) return false;
+            if (freq[ch]!=temp) return false;
         }
         return true;
     }
