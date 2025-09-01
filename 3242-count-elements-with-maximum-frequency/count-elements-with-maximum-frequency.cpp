@@ -10,15 +10,13 @@ public:
             if (freq[i]>max) max=freq[i];
         }
         int ans=0;
-        unordered_map<int,int> visited;
-        for (int i:nums)
+        for (auto i:freq)
         {
-            if (freq[i]==max && visited[i]==0)
+            if (i.second==max)
             {
-                visited[i]++;
-                ans++;
+                ans+=max;
             }
         }
-        return ans*max;;
+        return ans;
     }
 };
