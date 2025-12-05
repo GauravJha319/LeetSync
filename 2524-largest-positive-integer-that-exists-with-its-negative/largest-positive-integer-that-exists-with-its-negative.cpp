@@ -2,19 +2,17 @@ class Solution {
 public:
     int findMaxK(vector<int>& nums)
     {
-        vector<int> pos;
-        vector<int> neg;
+        unordered_map<int,int> freq;
         for (int i:nums)
         {
-            if (i<0) neg.push_back(i);
-            else pos.push_back(i);
+            if (i<0) freq[i]++;
         }
         int max=-1;
-        for (int i=0 ; i<pos.size() ; i++)
+        for (int i:nums)
         {
-            for (int j=0 ; j<neg.size() ; j++)
+            if (i>0)
             {
-                if (pos[i]+neg[j]==0 && pos[i]>max) max=pos[i];
+                if (freq[-1*i]!=0 && i>max) max=i;
             }
         }
         return max;
