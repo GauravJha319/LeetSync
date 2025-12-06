@@ -7,10 +7,8 @@ public:
         {
             for (int j=0 ; j<=limit ; j++)
             {
-                for (int k=0 ; k<=limit ; k++)
-                {
-                    if (i+j+k==n) tot++;
-                }
+                int k=n-i-j;
+                if (k>=0 && k<=limit) tot++;
             }
         }
         return tot;
