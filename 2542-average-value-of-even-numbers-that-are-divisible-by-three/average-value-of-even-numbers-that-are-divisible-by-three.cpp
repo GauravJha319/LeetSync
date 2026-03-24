@@ -5,7 +5,7 @@ public:
         int n=0 , sum=0;
         for (int i:nums)
         {
-            if (i%2==0 && i%3==0)
+            if (i%6==0)
             {
                 sum+=i;
                 n++;
