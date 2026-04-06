@@ -2,32 +2,21 @@ class Solution {
 public:
     void sortColors(vector<int>& nums)
     {
-        unordered_map<int,int> freq;
-        for (int i:nums)
+        int low=0 , mid=0 , high=nums.size()-1;
+        while (mid<=high)
         {
-            freq[i]++;
-        }
-        int j=0;
-        int itr=0;
-        while (itr<freq[0])
-        {
-            nums[j]=0;
-            j++;
-            itr++;
-        }
-        itr=0;
-        while (itr<freq[1])
-        {
-            nums[j]=1;
-            j++;
-            itr++;
-        }
-        itr=0;
-        while (itr<freq[2])
-        {
-            nums[j]=2;
-            j++;
-            itr++;
+            if (nums[mid]==0)
+            {
+                swap(nums[mid],nums[low]);
+                mid++;
+                low++;
+            }
+            else if (nums[mid]==1) mid++;
+            else
+            {
+                swap(nums[mid],nums[high]);
+                high--;
+            }
         }
     }
 };
