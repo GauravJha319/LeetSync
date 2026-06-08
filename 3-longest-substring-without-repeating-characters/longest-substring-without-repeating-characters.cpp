@@ -3,7 +3,6 @@ public:
     int lengthOfLongestSubstring(string s)
     {
         if (s.empty()) return 0;
-    
         unordered_map<char,int> freq;
         int l=0,r=0;
         int ans=1;
