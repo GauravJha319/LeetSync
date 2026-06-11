@@ -10,13 +10,13 @@ class Solution {
 public:
     bool hasCycle(ListNode *head)
     {
-        unordered_map<ListNode*,int> freq;
-        ListNode* dummy=head;
-        while (dummy)
+        ListNode* hare=head;
+        ListNode* tort=head;
+        while (hare && hare->next)
         {
-            if (freq[dummy]>0) return true;
-            freq[dummy]++;
-            dummy=dummy->next;
+            hare=hare->next->next;
+            tort=tort->next;
+            if (hare==tort) return true;
         }
         return false;
     }
