@@ -1,1 +1,1 @@
-<h2>merge-intervals Notes</h2><hr>[ Time taken: 9hrs 46m 25s ]
+<h2>merge-intervals Notes</h2><hr>[ Time taken: 1d 11hrs 44m 15s ]
