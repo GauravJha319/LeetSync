@@ -7,6 +7,6 @@ public:
         {
             if (nums[i]==nums[i+1]) return nums[i];
         }
-        return nums[nums.size()-1];
+        return 0;
     }
 };
