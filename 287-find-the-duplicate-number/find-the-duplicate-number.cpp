@@ -7,6 +7,6 @@ public:
         {
             if (nums[i]==nums[i+1]) return nums[i];
         }
-        return 0;
+        return 97845621;
     }
 };
